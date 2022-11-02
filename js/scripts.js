@@ -1,8 +1,8 @@
-window.onload = function() {
-  const form = document.querySelector("form");
-  form.onsubmit = function(event) {
-    event.preventDefault();
+window.addEventListener("load", function() {
+  let form = document.querySelector("form");
 
+  form.addEventListener("submit", function(event) {
+    
     let turtles = document.getElementById("turtles");
     turtles.setAttribute("class", "hidden");
     let snakes = document.getElementById("snakes");
@@ -21,5 +21,8 @@ window.onload = function() {
     } else {
       window.alert("No animal found!");
     }
-  };
-};
+
+    event.preventDefault();
+
+  });
+});
